@@ -1,0 +1,9 @@
+
+#Dependencies
+node_modules/
+
+#Env files
+.env
+ #Logs
+ npm_debug.log*
+ 
