@@ -1,4 +1,5 @@
-// Assuming you already have mongoose connected
+
+require('dotenv').config();
 
 const express = require('express');
 const mongoose = require('mongoose');
@@ -7,12 +8,10 @@ const app = express();
 
 
 // MongoDB connection
-mongoose.connect(
-    "mongodb+srv://monika:zWzFq1K598DSFUoU@funmate.dp5d8vn.mongodb.net/test?retryWrites=true&w=majority&appName=FunMate",
-    {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-    }
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+}
 ).then(() => console.log("MongoDB Connected"))
 .catch(err => console.log(err));
 
