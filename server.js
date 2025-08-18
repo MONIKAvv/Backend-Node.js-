@@ -25,7 +25,8 @@ const questionSchema = new mongoose.Schema({
   OptionD: String,
   AnswerIndex: String,
   Subjects: String,
-  AudioUrl: String
+  AudioUrl: String,
+  Hint: String
 });
 
 const Question = mongoose.model('Question', questionSchema);
